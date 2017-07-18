@@ -1,5 +1,5 @@
 FROM openjdk:8-jre-alpine
-MAINTAINER Damien DUPORTAL <dduportal@cloudbees.com>
+LABEL MAINTAINER="Damien DUPORTAL <dduportal@cloudbees.com>"
 
 COPY ./target/demoapp.jar /app/app.jar
 COPY hello-world.yml /app/config.yml
