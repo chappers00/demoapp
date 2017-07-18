@@ -1,7 +1,7 @@
-package com.dduportal.jenkins.demoapp;
+package com.cloudbees.demoapp;
 
-import com.dduportal.jenkins.demoapp.health.TemplateHealthCheck;
-import com.dduportal.jenkins.demoapp.resources.HelloWorldResource;
+import com.cloudbees.demoapp.health.TemplateHealthCheck;
+import com.cloudbees.demoapp.resources.HelloWorldResource;
 import io.dropwizard.Application;
 import io.dropwizard.assets.AssetsBundle;
 import io.dropwizard.setup.Bootstrap;

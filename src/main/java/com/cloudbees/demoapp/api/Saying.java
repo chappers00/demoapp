@@ -1,4 +1,4 @@
-package com.dduportal.jenkins.demoapp.api;
+package com.cloudbees.demoapp.api;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.hibernate.validator.constraints.Length;

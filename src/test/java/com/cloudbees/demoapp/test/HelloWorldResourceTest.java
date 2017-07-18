@@ -1,7 +1,7 @@
-package com.dduportal.jenkins.demoapp.test;
+package com.cloudbees.demoapp.test;
 
-import com.dduportal.jenkins.demoapp.api.Saying;
-import com.dduportal.jenkins.demoapp.resources.HelloWorldResource;
+import com.cloudbees.demoapp.api.Saying;
+import com.cloudbees.demoapp.resources.HelloWorldResource;
 import com.google.common.base.Optional;
 import org.junit.Before;
 import org.junit.Test;

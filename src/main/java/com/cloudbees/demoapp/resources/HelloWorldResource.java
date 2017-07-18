@@ -1,6 +1,6 @@
-package com.dduportal.jenkins.demoapp.resources;
+package com.cloudbees.demoapp.resources;
 
-import com.dduportal.jenkins.demoapp.api.Saying;
+import com.cloudbees.demoapp.api.Saying;
 import com.google.common.base.Optional;
 import com.codahale.metrics.annotation.Timed;
 

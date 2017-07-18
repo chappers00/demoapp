@@ -1,8 +1,8 @@
-package com.dduportal.jenkins.demoapp.test;
+package com.cloudbees.demoapp.test;
 
-import com.dduportal.jenkins.demoapp.HelloWorldApplication;
-import com.dduportal.jenkins.demoapp.HelloWorldConfiguration;
-import com.dduportal.jenkins.demoapp.api.Saying;
+import com.cloudbees.demoapp.HelloWorldApplication;
+import com.cloudbees.demoapp.HelloWorldConfiguration;
+import com.cloudbees.demoapp.api.Saying;
 import io.dropwizard.testing.ResourceHelpers;
 import io.dropwizard.testing.junit.DropwizardAppRule;
 import org.glassfish.jersey.client.JerseyClientBuilder;

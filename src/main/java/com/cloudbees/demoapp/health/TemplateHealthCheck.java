@@ -1,4 +1,4 @@
-package com.dduportal.jenkins.demoapp.health;
+package com.cloudbees.demoapp.health;
 
 import com.codahale.metrics.health.HealthCheck;
 

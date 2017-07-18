@@ -1,4 +1,4 @@
-package com.dduportal.jenkins.demoapp;
+package com.cloudbees.demoapp;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
