@@ -1,4 +1,4 @@
 template: Hello, %s!
-defaultName: Stranger
+defaultName: Your Mum
 server:
   rootPath: /api/
