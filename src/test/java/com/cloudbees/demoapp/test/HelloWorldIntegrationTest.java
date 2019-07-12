@@ -32,7 +32,7 @@ public class HelloWorldIntegrationTest {
                 String.format("http://localhost:%d/api/hello-world", RULE.getLocalPort())
         ).queryParam("name", "dropwizard").request().get(Saying.class);
 
-        assertThat(result.getContent()).isEqualTo("Hello, dropwizard!");
+        assertThat(result.getContent()).isEqualTo("Hello, Butler!");
 
 
     }
