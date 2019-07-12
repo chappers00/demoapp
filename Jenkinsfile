@@ -1,4 +1,4 @@
-def DOCKER_IMG_BASENAME-'demo-app'
+def DOCKER_IMG_BASENAME='demo-app'
 
 node('ssh-agent') {
 	stage('Checkout code') {
