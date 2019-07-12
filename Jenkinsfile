@@ -13,12 +13,16 @@ node('ssh-agent') {
 	withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]) {
 		stage('Build') {
 			sh "mvn package"
+			junit '**/target/surefire-reports/*.xml'
 			
 			// Stash is like archiveArtifacts,
 			// But is only valid for the build duration
 			stash includes: '**/target/*.jar',
 				name: 'application-binaries'
 		}
+		stage('Integration Tests') {
+			sh "mvn verify -fn"
+			junit '**/target/failsafe-reports/*.xml'
 	}
 }
 
