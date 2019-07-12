@@ -7,7 +7,7 @@ node('ssh-agent') {
 		
 		//We can set a groovy variable from a "sh" command stdout.
 		//Do not forget to remove endlines with trim()
-		GIT_SHORT_CHANGESET -
+		GIT_SHORT_CHANGESET =
 			sh(returnStdout:true, script: 'git rev-parse --short HEAD').trim()
 	}
 	withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]) {
