@@ -1,6 +1,6 @@
-node {
+node('ssh-agent') {
  stage('Checkout code') {
-     git 'http://localhost:5000/gitserver/butler/demoapp.git'
+     checkout scm
  }
  stage('Build') {
  def mvnHome = tool 'maven3'
