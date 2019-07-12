@@ -37,3 +37,23 @@ node('docker') {
 		sh "docker build -t ${DOCKER_IMG_BASENAME}:${GIT_SHORT_CHANGESET} ./"
 	}
 }
+
+//Putting "input" inside a stage will allow
+//The GUI to visualise it and show the popup
+//If not you will have to go to the console output of the build
+stage('Waiting approval') {
+	//We do not put "Input" within a node
+	//To avoid eating an executor while waiting
+	timeout(time:1, unit:'DAYS') {
+		input message: "Is it OK to deploy docker image?", ok:'Deploy'
+	}
+}
+
+//We do not put "build witin a node job for the same reasons as "input"
+stage('Deploy') {
+	//This will call the downstream job and block until it finishes
+	//Unless disabled, downstream job status will be reported to the pipeline
+	build job: 'demoapp-staging-deployer',
+		parameters: [string(name:'DOCKER_IMAGE',
+		value: "${DOCKER_IMG_BASENAME}:${GIT_SHORT_CHANGESET}")]
+}
