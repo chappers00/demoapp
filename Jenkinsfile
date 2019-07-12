@@ -23,6 +23,7 @@ node('ssh-agent') {
 		stage('Integration Tests') {
 			sh "mvn verify -fn"
 			junit '**/target/failsafe-reports/*.xml'
+		}
 	}
 }
 
