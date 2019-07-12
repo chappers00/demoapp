@@ -10,7 +10,7 @@ node('ssh-agent') {
 		GIT_SHORT_CHANGESET -
 			sh(returnStdout:true, script: 'git rev-parse --short HEAD').trim()
 	}
-	withEnv([PATH+MAVEN=${tool 'maven3'}/bin"]) {
+	withEnv(["PATH+MAVEN=${tool 'maven3'}/bin"]) {
 		stage('Build') {
 			sh "mvn package"
 			
